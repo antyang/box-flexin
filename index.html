@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flexin boxes</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+</head>
+<body>
+
+	<!-- siteHeader -->
+	<div class="siteHeader">
+	  <!-- This section gets pushed to the left side-->
+	  <div class="siteHeader__section">
+	    <div class="siteHeader__item siteHeaderLogo"  onclick="alert('lol');">
+	      <div class="fa fa-inbox"></div>
+	    </div>
+	    <div class="siteHeader__item siteHeaderButton is-site-header-item-selected" onclick="headerSelected(event)">Inbox</div>
+	    <div class="siteHeader__item siteHeaderButton" onclick="headerSelected(event)">Sent</div>
+	    <div class="siteHeader__item siteHeaderButton" onclick="headerSelected(event)">Trash</div>
+	  </div>
+	  <!-- This section gets pushed to the right side-->
+	  <div class="siteHeader__section">
+	    <div class="siteHeader__item siteHeaderButton" onclick="headerSelected(event)">Settings</div>
+	    <div class="siteHeader__item siteHeaderButton" onclick="headerSelected(event)">Log out</div>
+	  </div>
+	</div>
+
+	<!-- sideBar -->
+	<section>
+		<div class="sideBar" id="sideBar">
+		  <!-- This section gets pushed to the top-->
+		  <div class="sideBar__section">
+		    <div class="sideBar__item is-side-bar-item-selected" onclick="sideBarSelected(event)">Inbox</div>
+		    <div class="sideBar__item" onclick="sideBarSelected(event)">Contacts</div>
+		    <div class="sideBar__item" onclick="sideBarSelected(event)">Account</div>
+		  </div>
+		  <!-- This section gets pushed to the bottom-->
+		  <div class="sideBar__section">
+		    <div class="sideBar__item" onclick="sideBarSelected(event, changeTheme())">Change theme</div>
+		    <div class="sideBar__item" onclick="sideBarSelected(event)">Legal</div>
+		  </div>
+		</div>
+	</section>
+
+	<!-- stepperInput -->
+	<section>
+		<div class="stepperInput">
+		  <button class="button button--addOnLeft" onclick="modifyValue(-1)">-</button>
+		  <input type="text" placeholder="Age" value="32" class="input stepperInput__input"/>
+		  <button class="button button--addOnRight" onclick="modifyValue(1)">+</button>
+		</div>
+	</section>
+
+	<!-- tabs -->
+	<section>
+		<div class="tabs">
+			<div id="tab" class="tab" onclick="tabSelected(event)">Tab 1</div>
+			<div id="tab" class="tab" onclick="tabSelected(event)">Tab 2</div>
+			<div id="tab" class="tab is-tab-selected" onclick="tabSelected(event)">Tab 3</div>
+			<div id="tab" class="tab" onclick="tabSelected(event)">Tab 4</div>
+		</div>
+	</section>
+
+	<!-- card -->
+	<section>
+		<div class="card card--fixedWidth">
+		  <div class="card__description">
+		    <div class="icon fa fa-flask card__descriptionIcon"></div>
+		    <div class="card__descriptionText">Science potion</div>
+		  </div>
+		  <div class="card__price">Costs $5</div>
+		</div>
+	</section>
+
+	<!-- featuredList -->
+	<section>
+		<div class="featureListItem">
+		  <div class="featureListItem__icon">
+		    <div class="icon fa fa-calendar"></div>
+		  </div>
+		  <div class="featureListItem__description">The calendar feature makes scheduling a snap.</div>
+		</div>
+		<div class="featureListItem featureListItem--reverse">
+		  <div class="featureListItem__icon">
+		    <div class="icon fa fa-dashboard"></div>
+		  </div>
+		  <div class="featureListItem__description">Our dashboard gives you a bird&rsquo;s-eye-view-at-a-glance-on-the-go.</div>
+		</div>
+		<div class="featureListItem">
+		  <div class="featureListItem__icon">
+		    <div class="icon fa fa-envelope"></div>
+		  </div>
+		  <div class="featureListItem__description">You can get notified by email or SMS.</div>
+		</div>
+	</section>
+
+	<!-- footer -->
+	<div class="formFooter">
+	  <!-- This section gets pushed to the left side-->
+	  <div class="formFooter__section">
+	    <div class="formFooter__item formFooterFeedback" id="formFooterProgress">
+	      <div class="fa fa-spinner formFooterSpinner"></div>&nbsp;Saving...
+	    </div>
+	  </div>
+	  <!-- This section gets pushed to the right side-->
+	  <div class="formFooter__section">
+	    <div class="formFooter__item button button--clear" onclick="resetForm()">Reset</div>
+	    <div class="formFooter__item button" onclick="saveForm()">Save</div>
+	  </div>
+	</div>
+	
+<script type="text/javascript" src="scripts.js"></script>
+</body>
+</html>
